@@ -1,15 +1,24 @@
-import java.util.Arrays;
 
 public class Reverse{
   public static void main(String[] args){
-    int[] src = {1,2,3,4,5,6,7,8,9,10,11,12,13,14};
+    int[] data = {10,20,30,40,50,60,70,80};
     int tmp;
+    
+    System.out.println("dataの初期値");
 
-    for(int i = src.length / 2; i >= 0; i--){
-      tmp = src[(src.length-1) - i];
-      src[(src.length-1) - i] = src[i];
-      src[i] = tmp;
+    for(int i = 0; i < data.length; i++){
+      System.out.printf("data[%d] = %d \n",i,data[i]);
     }
-    System.out.println(Arrays.toString(src));
+
+
+    for(int i = data.length / 2; i >= 0; i--){
+      tmp = data[(data.length-1) - i];
+      data[(data.length-1) - i] = data[i];
+      data[i] = tmp;
+    }
+    System.out.println("逆順に入れ替え後");
+    for(int i = 0; i < data.length; i++){
+      System.out.printf("data[%d] = %d \n",i,data[i]);
+    }
   }
 }
